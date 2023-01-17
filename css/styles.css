@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+ul li ul {
+  display: none;
+}
+ul li:hover ul {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */

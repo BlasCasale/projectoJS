@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+  html {
+    font-size: 62.5%;
+}
+  
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: calc($medida * 1.8);
+}
+  
+img,
+iframe {
+    max-width: 100%;
+}
+  
+a {
+    text-decoration: none;
+    color: red;
+}
+
+ul {
+    list-style: none;
+    li ul {
+        display: none;
+    }
+    li:hover ul {
+        display: block;
+    }
+}
