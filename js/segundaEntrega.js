@@ -1,4 +1,5 @@
 // constructores
+// crear procesador constructor, despues variable procesador para cada uno
 
 class Procesador {
     constructor (nombre, ghz, nucleos, hilos, precio, posicion) {
@@ -84,6 +85,7 @@ alert("Hola, somos Mundo PC. Te vamos a mostrar las opciones que tenemos a la ve
 procesadores.forEach(element => {
     alert(`Los procesadores son ${element.nombre}, con ${element.ghz} Ghz, con ${element.nucleos} nucleos, con ${element.hilos} hilos, un precio de $${element.precio} y su número asignado es ${element.posicion}`)
 });
+
 
 let eleccionProcesador = prompt("Indica el número del procesador que deseas.")
 let compraProcesador

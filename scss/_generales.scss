@@ -8,7 +8,7 @@
 }
   
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: calc($medida * 1.8);
 }
   
@@ -22,12 +22,36 @@ a {
     color: red;
 }
 
+
 ul {
     list-style: none;
+    position: relative;
     li ul {
         display: none;
     }
     li:hover ul {
         display: block;
+        margin-bottom: 0.3rem;
+        li {
+            position: relative;
+        }
     }
+}
+
+h1 {
+    padding: 0.3rem;
+    color: $secundario;
+    font-size: 3rem;
+}
+
+/* Headear */
+
+.fondo__azul {
+    @include paddingBGC(0.5rem, $primario);
+    @include flexColCenCen;
+}
+.boton__navbar {
+    @include paddingBGC (0.3rem, $primario);
+    border: solid 0.4rem $terciario;
+    border-radius: 1rem;
 }

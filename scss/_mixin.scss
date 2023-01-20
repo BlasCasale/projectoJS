@@ -1,0 +1,22 @@
+@mixin flexColCenCen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin sizes ($ancho , $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin paddingMarginBGC ($padding, $margin, $bgc) {
+    padding: $padding;
+    margin: $margin;
+    background-color: $bgc;
+}
+
+@mixin paddingBGC ($padding, $bgc) {
+    padding: $padding;
+    background-color: $bgc;
+}

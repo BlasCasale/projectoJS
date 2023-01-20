@@ -1,3 +1,7 @@
 @media screen and (min-width: 320px) {
-    
+    .flexUl {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
