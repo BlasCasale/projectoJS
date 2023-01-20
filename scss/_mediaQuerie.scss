@@ -1,7 +1,67 @@
 @media screen and (min-width: 320px) {
+    /* Index */
+
+    /* Header */
     .flexUl {
         display: flex;
         flex-direction: row;
         gap: 2rem;
     }
+
+    /* Promociones */
+
+    .fondo__promo {
+        @include paddingBGC(3rem, $secundario);
+        @include flexColCenCen;
+    }
+    .carrusel {
+        @include sizes(350px, 350px);
+        &__img {
+            @include sizes(350px, 350px);
+        }
+        &__p {
+            color: $terciario;
+            padding: 0.5rem;
+            position: absolute;
+            text-align: center;
+        }
+    }
+    .precio {
+        font-weight: bold;
+    }
+
+    /* Metodos de pago */
+    .metodosDePago {
+        @include flexColCenCen;
+        @include sizes (150px, 90px);
+        background-color: $terciario;
+        margin: 3rem 0rem;
+        border: solid 3px $primario;
+        border-radius: 20px;
+        gap: 1rem;
+        &__h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        &__formas {
+            @include flexRowCenSA;
+            width: 150px;
+            padding: 0.5rem;
+        }
+        &__img {
+            @include sizes (35px, 28px);
+        }
+    }
+    
+
+    /* Envios */
+    .envios__img {
+        @include sizes(45px, 45px)
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px) {
+
 }

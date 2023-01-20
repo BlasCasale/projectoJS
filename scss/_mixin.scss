@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+@mixin flexRowCenSA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin sizes ($ancho , $alto) {
     width: $ancho;
     height: $alto;
@@ -20,3 +27,4 @@
     padding: $padding;
     background-color: $bgc;
 }
+

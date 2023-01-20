@@ -1,0 +1,11 @@
+/* Index */
+
+/* Promos */
+@media screen and (min-width: 320px) {
+    .grid__promos {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+}
