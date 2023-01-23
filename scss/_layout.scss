@@ -7,5 +7,12 @@
         grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .grid__promos {
+        grid-template-columns: 5fr 1fr;
     }
 }

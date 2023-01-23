@@ -57,18 +57,15 @@ h1 {
 }
 h2 {
     text-align: center;
-    font-size: 2.3rem;
-    padding: 1rem;
+    font-size: 2.5rem;
+    padding: 2rem;
     color: $terciario;
     background-color: $secundario;
 }
 
+
 /* Headear */
 
-.fondo__azul {
-    @include paddingBGC(0.5rem, $primario);
-    @include flexColCenCen;
-}
 .boton__navbar {
     @include paddingBGC (0.3rem, $primario);
     border: solid 0.4rem $terciario;

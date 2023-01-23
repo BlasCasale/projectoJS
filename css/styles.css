@@ -55,22 +55,13 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: 2.3rem;
-  padding: 1rem;
+  font-size: 2.5rem;
+  padding: 2rem;
   color: #fff;
   background-color: #003554;
 }
 
 /* Headear */
-.fondo__azul {
-  padding: 0.5rem;
-  background-color: #79ADDC;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .boton__navbar {
   padding: 0.3rem;
   background-color: #79ADDC;
@@ -81,38 +72,57 @@ h2 {
 @media screen and (min-width: 320px) {
   /* Index */
   /* Header */
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+    background-color: #79ADDC;
+  }
   .flexUl {
     display: flex;
     flex-direction: row;
     gap: 2rem;
   }
   /* Promociones */
-  .fondo__promo {
-    padding: 3rem;
-    background-color: #003554;
+  .card__promo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0.8rem;
+    background-color: #fff;
+    width: 310px;
+    height: 520px;
+    border: solid 4px #79ADDC;
+    border-radius: 40px;
+    gap: 0.5rem;
   }
-  .carrusel {
-    width: 350px;
-    height: 350px;
-  }
-  .carrusel__img {
-    width: 350px;
-    height: 350px;
-  }
-  .carrusel__p {
-    color: #fff;
-    padding: 0.5rem;
-    position: absolute;
+  .card__promo-h3 {
     text-align: center;
-  }
-  .precio {
+    font-size: 2rem;
     font-weight: bold;
   }
+  .card__promo-boton {
+    padding: 4px;
+    background-color: #003554;
+    border: solid 3px #79ADDC;
+    border-radius: 15px;
+    color: #fff;
+  }
+  .card__promo-img {
+    width: 300px;
+    height: 300px;
+  }
   /* Metodos de pago */
+  .caja__metodos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
   .metodosDePago {
     display: flex;
     flex-direction: column;
@@ -156,6 +166,40 @@ h2 {
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .grid__promos {
+    grid-template-columns: 5fr 1fr;
+  }
+}
+@media screen and (min-width: 320px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 85px;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: solid 3px #79ADDC;
+    border-radius: 20px;
+  }
+  footer p {
+    text-align: center;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .footer {
+    justify-content: start;
+    margin-left: 20px;
   }
 }
 

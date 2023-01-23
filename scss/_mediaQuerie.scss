@@ -2,6 +2,14 @@
     /* Index */
 
     /* Header */
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @include paddingBGC(0.5rem, $primario);
+
+    }
     .flexUl {
         display: flex;
         flex-direction: row;
@@ -10,27 +18,56 @@
 
     /* Promociones */
 
-    .fondo__promo {
-        @include paddingBGC(3rem, $secundario);
+    .card__promo {
         @include flexColCenCen;
-    }
-    .carrusel {
-        @include sizes(350px, 350px);
-        &__img {
-            @include sizes(350px, 350px);
-        }
-        &__p {
-            color: $terciario;
-            padding: 0.5rem;
-            position: absolute;
+        @include paddingBGC (0.8rem, $terciario);
+        @include sizes (310px, 520px);
+        border: solid 4px $primario;
+        border-radius: 40px;
+        gap: 0.5rem;
+        &-h3 {
             text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
         }
-    }
-    .precio {
-        font-weight: bold;
+        &-boton {
+            @include paddingBGC (4px, $secundario);
+            border: solid 3px $primario;
+            border-radius: 15px;
+            color: $terciario;
+        }
+        &-img {
+            @include sizes (300px, 300px);
+        }
     }
 
+    // .fondo__promo {
+    //     @include paddingBGC(3rem, $secundario);
+    //     @include flexColCenCen;
+    // }
+    // .carrusel {
+    //     @include sizes(350px, 350px);
+    //     &__img {
+    //         @include sizes(350px, 350px);
+    //     }
+    //     &__p {
+    //         color: $terciario;
+    //         padding: 0.5rem;
+    //         position: absolute;
+    //         text-align: center;
+    //     }
+    // }
+    // .precio {
+    //     font-weight: bold;
+    // }
+
     /* Metodos de pago */
+
+    .caja__metodos {
+        @include flexColCenCen;
+        padding: 1rem;
+        gap: 2rem;
+    }
     .metodosDePago {
         @include flexColCenCen;
         @include sizes (150px, 90px);
