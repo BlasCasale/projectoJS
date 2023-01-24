@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mundo Gamer es un sitio web de compra de hardware para tu PC al mejor precio.">
+    <meta name="keywords" content="procesadores, motherboard, ram, discos, placa de video, mejor precio">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -14,53 +16,52 @@
 
     <!-- Header con nav -->
     <header class="fondo__azul">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="fondo__azul p-4">
-                <ul class="fondo__azul flexUl">
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-    
-                    <li>
-                        <a href="pages/catalogo.html">Catálogo</a>
-                        <ul>
-                            <li>
-                                <a href="#procesador">Procesadores</a>
-                            </li>
-    
-                            <li>
-                                <a href="#motherboard">Mother</a>
-                            </li>
-                            
-                            <li>
-                                <a href="#gpu">GPU</a>
-                            </li>
-                            
-                            <li>
-                                <a href="#ram">RAM</a>
-                            </li>
-                            
-                            <li>
-                                <a href="#discos">Discos</a>
-                            </li>
-                        </ul>
-                    </li>
-    
-                </ul>
-            </div>
-        </div>
+      <ul class="fondo__azul flexUl">
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
 
-        <nav class="navbar navbar-dark fondo__azul">
-            <div class="container-fluid fondo__azul">
-              <button class=" boton__navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-        </nav>
+        <li>
+            <a href="pages/catalogo.html">Catálogo</a>
+            <ul>
+                <li>
+                    <a href="#procesador">Procesadores</a>
+                </li>
 
-        <h1>Mundo Gamer</h1>
+                <li>
+                    <a href="#motherboard">Mother</a>
+                </li>
+                
+                <li>
+                    <a href="#gpu">GPU</a>
+                </li>
+                
+                <li>
+                    <a href="#ram">RAM</a>
+                </li>
+                
+                <li>
+                    <a href="#discos">Discos</a>
+                </li>
+            </ul>
+        </li>
+
+      </ul>
+
+      <a href="index.html"><h1>Mundo Gamer</h1></a>
+
+      <div class="login">
+        <a href="pages/login.html">Inicia sesión</a>
+        <a href="pages/registro.html">Registrate</a>
+      </div>
+
+      <div>
+        <a href="pages/carrito.html"><img src="img/carrito.png" alt="Carro de compras" class="img__carrito"></a>
+      </div>
+
+
     </header>
-
+    
 
     <!-- Carrusel con promos -->
 
@@ -68,13 +69,13 @@
     
     <section class="fondo__promo grid__promos">
       
-      <div>
+      <div class="caja__promo">
 
         <!-- Promo 1 -->
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/discoHDD1TB.webp" alt="Disco 1TB HDD" class="card__promo-img"></img> 
 
           <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
 
@@ -88,11 +89,11 @@
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/discoSDD1TB.webp" alt="Disco 1TB SDD" class="card__promo-img"></img> 
 
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
+          <p class="card__promo-p">Disco WD Green de 1TB SDD</p>
 
-          <h3 class="card__promo-h3">$8500</h3>
+          <h3 class="card__promo-h3">$12000</h3>
 
           <button class="card__promo-boton">Agregar al carrito</button>
 
@@ -102,11 +103,11 @@
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/ram__kingston8gb.webp" alt="RAM Kingston de 8 GB" class="card__promo-img"></img> 
 
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
+          <p class="card__promo-p">RAM Kingston de 8 GB</p>
 
-          <h3 class="card__promo-h3">$8500</h3>
+          <h3 class="card__promo-h3">$4500</h3>
 
           <button class="card__promo-boton">Agregar al carrito</button>
 
@@ -116,11 +117,11 @@
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/mother__b450m.webp" alt="Mother B450M" class="card__promo-img"></img> 
 
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
+          <p class="card__promo-p">Motherboard AMD B450M</p>
 
-          <h3 class="card__promo-h3">$8500</h3>
+          <h3 class="card__promo-h3">$23000</h3>
 
           <button class="card__promo-boton">Agregar al carrito</button>
 
@@ -130,11 +131,11 @@
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/ryzen5__4500.webp" alt="Ryzen 5 4500" class="card__promo-img"></img> 
 
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
+          <p class="card__promo-p">Procesador Ryzen 5 4500</p>
 
-          <h3 class="card__promo-h3">$8500</h3>
+          <h3 class="card__promo-h3">$27000</h3>
 
           <button class="card__promo-boton">Agregar al carrito</button>
 
@@ -144,17 +145,17 @@
         <div class="card__promo">
           <h3 class="card__promo-h3">Oferta limitada!</h3>
 
-          <img src="img/discoHDD1TB.png" alt="Disco 1TB HDD" class="card__promo-img"></img> 
+          <img src="img/rtx2080.webp" alt="RTX 2080" class="card__promo-img"></img> 
 
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
+          <p class="card__promo-p">Placa de video RTX 2080</p>
 
-          <h3 class="card__promo-h3">$8500</h3>
+          <h3 class="card__promo-h3">$42000</h3>
 
           <button class="card__promo-boton">Agregar al carrito</button>
 
         </div>
       
-
+      </div>
       <!-- Metodos de pago y envios -->
           
         <div class="caja__metodos">
@@ -164,16 +165,16 @@
             <h3 class="metodosDePago__h3">Métodos de pago</h3>
   
             <div class="metodosDePago__formas">
-              <img src="img/mercadoPago.png" alt="Mercado pago" class="metodosDePago__img">
-              <img src="img/visa.jpg" alt="Visa" class="metodosDePago__img">
-              <img src="img/mastercard.png" alt="MasterCard" class="metodosDePago__img">
+              <img src="img/mercadoPago.webp" alt="Mercado pago" class="metodosDePago__img">
+              <img src="img/visa.webp" alt="Visa" class="metodosDePago__img">
+              <img src="img/mastercard.webp" alt="MasterCard" class="metodosDePago__img">
             </div>
 
           </div>
   
           <div class="metodosDePago">
             <h3 class="metodosDePago__h3">Hacemos envios</h3>
-            <img src="img/envios.jpg" alt="Mensajería" class="envios__img">
+            <img src="img/envios.webp" alt="Mensajería" class="envios__img">
           </div>
 
         </div>
@@ -190,6 +191,6 @@
     </div>
 
 
-    <script src="js/index.js"></script>
+    <script src="js/prueba.js"></script>
 </body>
 </html>

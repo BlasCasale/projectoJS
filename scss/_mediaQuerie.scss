@@ -4,20 +4,25 @@
     /* Header */
 
     header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flexColCenCen;
         @include paddingBGC(0.5rem, $primario);
-
+        gap: 1rem;
     }
     .flexUl {
         display: flex;
         flex-direction: row;
         gap: 2rem;
     }
+    .img__carrito {
+        @include sizes(45px, 45px);
+    }
 
     /* Promociones */
-
+    .caja__promo {
+        @include gridCenCen;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
     .card__promo {
         @include flexColCenCen;
         @include paddingBGC (0.8rem, $terciario);
@@ -41,25 +46,12 @@
         }
     }
 
-    // .fondo__promo {
-    //     @include paddingBGC(3rem, $secundario);
-    //     @include flexColCenCen;
-    // }
-    // .carrusel {
-    //     @include sizes(350px, 350px);
-    //     &__img {
-    //         @include sizes(350px, 350px);
-    //     }
-    //     &__p {
-    //         color: $terciario;
-    //         padding: 0.5rem;
-    //         position: absolute;
-    //         text-align: center;
-    //     }
-    // }
-    // .precio {
-    //     font-weight: bold;
-    // }
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
 
     /* Metodos de pago */
 
@@ -99,6 +91,16 @@
     
 }
 
+@media screen and (min-width: 600px) {
+    header {
+        @include flexRowCenSA;
+        gap: 0.5rem;
+    }
+}
+
+
+
 @media screen and (min-width: 1024px) {
 
 }
+

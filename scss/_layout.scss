@@ -11,8 +11,22 @@
     }
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 800px) {
+    .caja__promo {
+        @include gridCenCen;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
     .grid__promos {
         grid-template-columns: 5fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .caja__promo {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

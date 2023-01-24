@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+@mixin gridCenCen {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin sizes ($ancho , $alto) {
     width: $ancho;
     height: $alto;
