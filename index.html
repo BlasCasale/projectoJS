@@ -16,37 +16,8 @@
 
     <!-- Header con nav -->
     <header class="fondo__azul">
-      <ul class="fondo__azul flexUl">
-        <li>
-            <a href="index.html">Inicio</a>
-        </li>
+      <a href="index.html">Inicio</a>
 
-        <li>
-            <a href="pages/catalogo.html">Catálogo</a>
-            <ul>
-                <li>
-                    <a href="#procesador">Procesadores</a>
-                </li>
-
-                <li>
-                    <a href="#motherboard">Mother</a>
-                </li>
-                
-                <li>
-                    <a href="#gpu">GPU</a>
-                </li>
-                
-                <li>
-                    <a href="#ram">RAM</a>
-                </li>
-                
-                <li>
-                    <a href="#discos">Discos</a>
-                </li>
-            </ul>
-        </li>
-
-      </ul>
 
       <a href="index.html"><h1>Mundo Gamer</h1></a>
 
@@ -63,99 +34,16 @@
     </header>
     
 
-    <!-- Carrusel con promos -->
 
-    <h2>Promociones!</h2>
+
+    <h2>Nuestros productos</h2>
     
-    <section class="fondo__promo grid__promos">
-      
-      <div class="caja__promo">
+    <section class="grid__cards">      
 
-        <!-- Promo 1 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
+      <div class="caja__cards" id="padreCards">
 
-          <img src="img/discoHDD1TB.webp" alt="Disco 1TB HDD" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">Disco Seagate de 1TB HDD</p>
-
-          <h3 class="card__promo-h3">$8500</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-
-        <!-- Promo 2 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
-
-          <img src="img/discoSDD1TB.webp" alt="Disco 1TB SDD" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">Disco WD Green de 1TB SDD</p>
-
-          <h3 class="card__promo-h3">$12000</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-
-        <!-- Promo 3 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
-
-          <img src="img/ram__kingston8gb.webp" alt="RAM Kingston de 8 GB" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">RAM Kingston de 8 GB</p>
-
-          <h3 class="card__promo-h3">$4500</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-
-        <!-- Promo 4 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
-
-          <img src="img/mother__b450m.webp" alt="Mother B450M" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">Motherboard AMD B450M</p>
-
-          <h3 class="card__promo-h3">$23000</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-
-        <!-- Promo 5 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
-
-          <img src="img/ryzen5__4500.webp" alt="Ryzen 5 4500" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">Procesador Ryzen 5 4500</p>
-
-          <h3 class="card__promo-h3">$27000</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-
-        <!-- Promo 6 -->
-        <div class="card__promo">
-          <h3 class="card__promo-h3">Oferta limitada!</h3>
-
-          <img src="img/rtx2080.webp" alt="RTX 2080" class="card__promo-img"></img> 
-
-          <p class="card__promo-p">Placa de video RTX 2080</p>
-
-          <h3 class="card__promo-h3">$42000</h3>
-
-          <button class="card__promo-boton">Agregar al carrito</button>
-
-        </div>
-      
       </div>
+
       <!-- Metodos de pago y envios -->
           
         <div class="caja__metodos">
@@ -190,7 +78,9 @@
     </footer>
     </div>
 
-
-    <script src="js/prueba.js"></script>
+    <script src="js/stock.js"></script>
+    <script src="js/crearCards.js"></script>
+    <script src="js/pushearCarrito.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

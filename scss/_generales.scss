@@ -65,7 +65,10 @@ h2 {
     color: $terciario;
     background-color: $secundario;
 }
-
+select, option {
+    border: solid 2px $secundario;
+    border-radius: 1rem;
+}
 
 /* Headear */
 

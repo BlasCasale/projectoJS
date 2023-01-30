@@ -18,12 +18,12 @@
     }
 
     /* Promociones */
-    .caja__promo {
+    .caja__cards {
         @include gridCenCen;
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .card__promo {
+    .card__producto {
         @include flexColCenCen;
         @include paddingBGC (0.8rem, $terciario);
         @include sizes (310px, 520px);
