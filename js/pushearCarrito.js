@@ -9,7 +9,6 @@ if (carritoLS) {
 const contenedor = document.getElementById('padreCards')
 
 contenedor.addEventListener('click', (e) => {
-    console.log(e.target.id)
     agregarAlCarrito(e.target.id)
 })
 
@@ -18,7 +17,6 @@ const agregarAlCarrito = (productoID) => {
 
     if (producto != undefined){
         carrito.push(producto)
-        console.table(carrito)
     } else {
         carrito.push()
     }

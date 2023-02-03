@@ -219,6 +219,45 @@ select, option {
     width: 60px;
     height: 70px;
   }
+  /* login y registrar */
+  .cajaForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  fieldset {
+    width: 320px;
+    height: 300px;
+    padding: 5px;
+    margin: 20px 0px;
+    background-color: #fff;
+    border: solid 3px #79ADDC;
+    border-radius: 30px;
+  }
+  legend {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .form__p {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .form__btn {
+    padding: 4px;
+    background-color: #003554;
+    border: solid 3px #79ADDC;
+    border-radius: 15px;
+    color: #fff;
+  }
 }
 @media screen and (min-width: 600px) {
   header {

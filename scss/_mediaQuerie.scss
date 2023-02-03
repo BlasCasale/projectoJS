@@ -118,6 +118,39 @@
             @include sizes(60px, 70px);
         }
     }
+
+
+    /* login y registrar */
+
+    .cajaForm {
+        @include flexColCenCen;
+    }
+    
+    fieldset {
+        @include sizes(320px, 300px);
+        @include paddingMarginBGC (5px, 20px 0px, $terciario);
+        border: solid 3px $primario;
+        border-radius: 30px;
+    }
+    legend {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .form {
+        @include flexColCenCen;
+        gap: 10px;
+        &__p {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        &__btn {
+            @include paddingBGC (4px, $secundario);
+            border: solid 3px $primario;
+            border-radius: 15px;
+            color: $terciario;
+        }
+    }
 }
 
 @media screen and (min-width: 600px) {

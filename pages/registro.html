@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Registrarse | Mundo Gamer</title>
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+
+        <nav>
+          <a href="../index.html">Inicio</a>
+        </nav>
+  
+        <a href="../index.html"><h1>Mundo Gamer</h1></a>
+
+        <div class="login">
+          <a href="login.html">Inicia sesión</a>
+          <a href="registro.html">Registrate</a>
+        </div>
+  
+        <div>
+          <a href="carrito.html"><img src="../img/carrito.png" alt="Carro de compras" class="img__carrito"></a>
+        </div>
+  
+    </header>
+
     
+    <!-- Formulario de registro -->
+
+    <main class="cajaForm">
+
+        <fieldset>
+            <legend>Registra tu cuenta</legend>
+    
+            <form action="" id="formRegistro" class="form">
+    
+                <input type="text" name="" id="nombreRegistro" placeholder="Nombre y apellido" required>
+        
+                <input type="password" name="" id="contraRegistro" placeholder="Contraseña" required>
+        
+                <button type="submit" id="btnSubmit" class="form__btn">Registrarse</button>
+        
+                <p id="registroForm" class="form__p"></p>
+        
+            </form>
+    
+        </fieldset>
+        
+    </main>
+
+
+    <script src="../js/registro.js"></script>
 </body>
 </html>

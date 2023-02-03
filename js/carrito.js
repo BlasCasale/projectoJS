@@ -34,14 +34,19 @@ hacerCarrito()
 const btnTacho = document.getElementById('carrito')
 
 btnTacho.addEventListener('click', (e) => {
-    console.log(e.target.id)
-    sacarDelCarrito(e.target.id)
+    sacarDelCarrito(e.target)
 })
 
 const sacarDelCarrito = (productoID) => {
-    let id = carritoJSON.find(producto => producto.id == productoID)
+    let index = carritoJSON.findIndex(producto => producto.id == productoID)
+    carritoJSON.splice(index, 1)
+    carrito = JSON.stringify(carritoJSON)
+    localStorage.setItem('carrito', carrito)
+    
+    const contenedor = document.getElementById('carrito')
+    contenedor.innerHTML = ""
 
-    console.log(id)
+    hacerCarrito()
 }
 
 
@@ -56,11 +61,8 @@ vaciarCarro.addEventListener('click', () => {
     carrito = JSON.stringify(carritoJSON)
     localStorage.setItem('carrito', carrito)
 
-    // hago el carrito de nuevo
-    let padreDiv = document.getElementById('carrito')
-    let div = document.getElementsByClassName('card__carro')
-
-    padreDiv.removeChild(div)
+    const contenedor = document.getElementById('carrito')
+    contenedor.innerHTML = ""
 
     hacerCarrito()
 })
