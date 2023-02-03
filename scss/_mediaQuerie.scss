@@ -88,7 +88,36 @@
         @include sizes(45px, 45px)
     }
 
+
+    /* Carrito */
+
+    .caja__carro {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
     
+    .card__carro {
+        @include flexRowCenSA;
+        @include paddingMarginBGC (3px, 0 20px ,$terciario);
+        @include sizes (max-width, 100px);
+        border: solid 3px $secundario;
+        border-radius: 40px;
+            &-p {
+                font-weight: bold;
+            }
+            &-img {
+                @include sizes (100px, 95px)
+            }
+    }
+
+    .btn__tacho {
+        border: none;
+        @include sizes (60px, 70px);
+        &-tacho {
+            @include sizes(60px, 70px);
+        }
+    }
 }
 
 @media screen and (min-width: 600px) {

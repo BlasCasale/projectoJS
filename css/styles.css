@@ -184,6 +184,41 @@ select, option {
     width: 45px;
     height: 45px;
   }
+  /* Carrito */
+  .caja__carro {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .card__carro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px;
+    margin: 0 20px;
+    background-color: #fff;
+    width: max-width;
+    height: 100px;
+    border: solid 3px #003554;
+    border-radius: 40px;
+  }
+  .card__carro-p {
+    font-weight: bold;
+  }
+  .card__carro-img {
+    width: 100px;
+    height: 95px;
+  }
+  .btn__tacho {
+    border: none;
+    width: 60px;
+    height: 70px;
+  }
+  .btn__tacho-tacho {
+    width: 60px;
+    height: 70px;
+  }
 }
 @media screen and (min-width: 600px) {
   header {
