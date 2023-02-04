@@ -26,24 +26,31 @@ class Cliente {
 formRegistro.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    for (let {nombre: n} of clientes) {
-        if (nombreRegistro.value != n) {
-
-            clientes.push(new Cliente(nombreRegistro.value, contraRegistro.value))
-    
-            const clientesJSON = JSON.stringify(clientes)
-            localStorage.setItem('clientes', clientesJSON)
-
-            registroForm.innerText = `Usuario registrado exitosamente.`
-            
-        }else {
-
-            registroForm.innerText = `Ya existe nombre para ese usuario`
-            
-        }
-        console.log(n)
-    }
+    buscarCliente(nombreRegistro.value)
 })
 
+const buscarCliente = (nombreUsuario) => {
+
+    const buscarNombre = clientes.find(usuario => usuario.nombre == nombreUsuario)
+ 
+    console.log(buscarNombre)
+
+    if (nombreRegistro.value == buscarNombre) {
+
+        registroForm.innerText = `Ya existe nombre para ese usuario`
+        
+    }else if (nombreRegistro.value != buscarNombre) {
+        
+        clientes.push(new Cliente(nombreRegistro.value, contraRegistro.value))
+
+        const clientesJSON = JSON.stringify(clientes)
+        localStorage.setItem('clientes', clientesJSON)
+
+        nombreRegistro.value = ""
+        contraRegistro.value = ""
+
+        registroForm.innerText = `Usuario registrado exitosamente.`
+    }
+}
 console.log(clientes)
 
