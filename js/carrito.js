@@ -29,6 +29,19 @@ const hacerCarrito = () => {
 hacerCarrito()
 
 
+// sumar compra
+const sumarCompra = () => {
+    const totalCarro = document.getElementById('totalCarro')
+
+    carritoJSON.forEach(compra => {
+        let valorInicial = 0
+        const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
+        
+        totalCarro.innerText = `$${sumaCompra}`
+    });
+}
+
+
 // obtengo botones para eliminar uno por uno los elementos
 
 const btnTacho = document.getElementById('carrito')
@@ -46,7 +59,9 @@ const sacarDelCarrito = (productoID) => {
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""
 
+    sumarCompra()
     hacerCarrito()
+
 }
 
 
@@ -63,6 +78,9 @@ vaciarCarro.addEventListener('click', () => {
 
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""
-
+    
+    sumarCompra()
     hacerCarrito()
+
 })
+

@@ -29,18 +29,19 @@ formRegistro.addEventListener('submit', (e) => {
     buscarCliente(nombreRegistro.value)
 })
 
+// con esta funcion lo que quiero hacer es buscar dentro del array si existe ese usuario ingresado con ese mismo nombre para ver si lo creo o no
 const buscarCliente = (nombreUsuario) => {
 
     const buscarNombre = clientes.find(usuario => usuario.nombre == nombreUsuario)
  
     console.log(buscarNombre)
 
-    if (nombreRegistro.value == buscarNombre) {
+    if (buscarNombre) {
 
         registroForm.innerText = `Ya existe nombre para ese usuario`
         
-    }else if (nombreRegistro.value != buscarNombre) {
-        
+    }else  {
+
         clientes.push(new Cliente(nombreRegistro.value, contraRegistro.value))
 
         const clientesJSON = JSON.stringify(clientes)
@@ -50,7 +51,7 @@ const buscarCliente = (nombreUsuario) => {
         contraRegistro.value = ""
 
         registroForm.innerText = `Usuario registrado exitosamente.`
+
     }
 }
-console.log(clientes)
 

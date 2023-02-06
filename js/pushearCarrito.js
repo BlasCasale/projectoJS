@@ -12,6 +12,7 @@ contenedor.addEventListener('click', (e) => {
     agregarAlCarrito(e.target.id)
 })
 
+// con esta funcion busco los productos por id y los voy pusheando al array
 const agregarAlCarrito = (productoID) => {
     const producto = productos.find(producto => producto.id == productoID)
 

@@ -119,6 +119,27 @@
         }
     }
 
+    .btnYTotal {
+        @include flexRowCenSA;
+        margin-top: 20px;
+    }
+
+    .vaciar__carrito {
+        @include paddingBGC (4px, $terciario);
+        border: solid 3px $primario;
+        border-radius: 15px;
+        color: $secundario;
+    }
+
+    .totalCarro {
+        @include sizes (200px, 40px);
+        @include paddingBGC(4px, $terciario);
+        border: solid 3px $primario;
+        border-radius: 15px;
+        text-align: center;
+        color: $secundario;
+    }
+
 
     /* login y registrar */
 
@@ -143,6 +164,7 @@
         &__p {
             font-weight: bold;
             font-size: 15px;
+            text-align: center;
         }
         &__btn {
             @include paddingBGC (4px, $secundario);

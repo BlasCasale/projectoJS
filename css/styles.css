@@ -219,6 +219,30 @@ select, option {
     width: 60px;
     height: 70px;
   }
+  .btnYTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .vaciar__carrito {
+    padding: 4px;
+    background-color: #fff;
+    border: solid 3px #79ADDC;
+    border-radius: 15px;
+    color: #003554;
+  }
+  .totalCarro {
+    width: 200px;
+    height: 40px;
+    padding: 4px;
+    background-color: #fff;
+    border: solid 3px #79ADDC;
+    border-radius: 15px;
+    text-align: center;
+    color: #003554;
+  }
   /* login y registrar */
   .cajaForm {
     display: flex;
@@ -250,6 +274,7 @@ select, option {
   .form__p {
     font-weight: bold;
     font-size: 15px;
+    text-align: center;
   }
   .form__btn {
     padding: 4px;
