@@ -2,6 +2,17 @@ let carrito = localStorage.getItem('carrito')
 
 let carritoJSON = JSON.parse(carrito)
 
+// sumar compra
+const sumarCompra = () => {
+    const totalCarro = document.getElementById('totalCarro')
+
+    carritoJSON.forEach(compra => {
+        let valorInicial = 0
+        const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
+        
+        totalCarro.innerText = `$${sumaCompra}`
+    });
+}
 
 const hacerCarrito = () => {
     const contenedor = document.getElementById('carrito')
@@ -24,23 +35,10 @@ const hacerCarrito = () => {
         
         contenedor.prepend(div)
     });
+    sumarCompra()
 }
 
 hacerCarrito()
-
-
-// sumar compra
-const sumarCompra = () => {
-    const totalCarro = document.getElementById('totalCarro')
-
-    carritoJSON.forEach(compra => {
-        let valorInicial = 0
-        const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
-        
-        totalCarro.innerText = `$${sumaCompra}`
-    });
-}
-
 
 // obtengo botones para eliminar uno por uno los elementos
 
