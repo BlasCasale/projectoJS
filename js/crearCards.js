@@ -9,7 +9,7 @@ const hacerCards = () => {
     
                         <p class="card__producto-p">${producto.nombre}</p>
     
-                        <h3 class="card__producto-h3">${producto.precio}</h3>
+                        <h3 class="card__producto-h3">$${producto.precio}</h3>
     
                         <button type="submit" id="${producto.id}" class="card__producto-boton">Agregar al carrito</button>
         `

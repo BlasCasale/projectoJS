@@ -47,7 +47,7 @@ const sumarCompra = () => {
 const btnTacho = document.getElementById('carrito')
 
 btnTacho.addEventListener('click', (e) => {
-    sacarDelCarrito(e.target)
+    sacarDelCarrito(e.target.button)
 })
 
 const sacarDelCarrito = (productoID) => {
@@ -59,9 +59,8 @@ const sacarDelCarrito = (productoID) => {
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""
 
-    sumarCompra()
     hacerCarrito()
-
+    sumarCompra()
 }
 
 
@@ -78,9 +77,8 @@ vaciarCarro.addEventListener('click', () => {
 
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""
-    
-    sumarCompra()
-    hacerCarrito()
 
+    hacerCarrito()
+    sumarCompra()
 })
 
