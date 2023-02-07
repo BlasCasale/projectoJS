@@ -6,12 +6,10 @@ let carritoJSON = JSON.parse(carrito)
 const sumarCompra = () => {
     const totalCarro = document.getElementById('totalCarro')
 
-    carritoJSON.forEach(compra => {
-        let valorInicial = 0
-        const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
+    let valorInicial = 0
+    const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
         
-        totalCarro.innerText = `$${sumaCompra}`
-    });
+    totalCarro.innerText = `$${sumaCompra}`
 }
 
 const hacerCarrito = () => {
@@ -45,7 +43,7 @@ hacerCarrito()
 const btnTacho = document.getElementById('carrito')
 
 btnTacho.addEventListener('click', (e) => {
-    sacarDelCarrito(e.target.button)
+    sacarDelCarrito(e.target)
 })
 
 const sacarDelCarrito = (productoID) => {
@@ -76,7 +74,6 @@ vaciarCarro.addEventListener('click', () => {
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""
 
-    hacerCarrito()
     sumarCompra()
 })
 
