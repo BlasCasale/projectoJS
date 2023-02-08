@@ -43,20 +43,38 @@ hacerCarrito()
 const btnTacho = document.getElementById('carrito')
 
 btnTacho.addEventListener('click', (e) => {
-    sacarDelCarrito(e.target)
+    sacarDelCarrito(e.target, e.target.id)
 })
 
-const sacarDelCarrito = (productoID) => {
-    let index = carritoJSON.findIndex(producto => producto.id == productoID)
-    carritoJSON.splice(index, 1)
-    carrito = JSON.stringify(carritoJSON)
-    localStorage.setItem('carrito', carrito)
+const sacarDelCarrito = (productoIndex, productoID) => {
+    let index = carritoJSON.findIndex(producto => producto == productoIndex)
+    let id = carritoJSON.find(producto => producto.id == productoID)
     
-    const contenedor = document.getElementById('carrito')
-    contenedor.innerHTML = ""
+    if (index && id) {
+        carritoJSON.splice(index, 1)
+        carrito = JSON.stringify(carritoJSON)
+        localStorage.setItem('carrito', carrito)
+        
+        const contenedor = document.getElementById('carrito')
+        contenedor.innerHTML = ""
 
-    hacerCarrito()
-    sumarCompra()
+        Toastify({
+            text: "Producto eliminado",
+            duration: 1500,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(90deg, rgba(0,53,84,1) 30%, rgba(121,173,220,1) 83%)",
+                color: "#fff",
+                borderRadius: "30px",
+                border: "solid 2px #110e82"
+            },
+        }).showToast()
+    
+        hacerCarrito()
+        sumarCompra()
+    }
+
 }
 
 

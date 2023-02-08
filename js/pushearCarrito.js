@@ -18,12 +18,34 @@ const agregarAlCarrito = (productoID) => {
 
     if (producto != undefined){
         carrito.push(producto)
+        Toastify({
+            text: "Producto agregado",
+            duration: 1500,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(90deg, rgba(0,53,84,1) 30%, rgba(121,173,220,1) 83%)",
+                color: "#fff",
+                borderRadius: "30px",
+                border: "solid 2px #110e82"
+            },
+            destination: "pages/carrito.html",
+            newWindow: true,
+            close: true,
+            stopOnFocus: true,
+        }).showToast()
     } else {
         carrito.push()
     }
+
+
     
     const carritoJSON = JSON.stringify(carrito)
     localStorage.setItem('carrito', carritoJSON)
 }
 
+// alerta de boton con toastify
 
+const alertaProducto = () => {
+
+}
