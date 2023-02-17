@@ -1,5 +1,7 @@
 const productos = []
 
+const productosLS = JSON.parse(localStorage.getItem('productos'))
+
 class Producto {
     constructor (nombre, categoria, img, precio, id, stock) {
         this.nombre = nombre
@@ -30,3 +32,6 @@ const sdd2TB = new Producto ('Disco SDD 2TB', 'disco' || 'discos', 'img/discoSDD
 
 
 productos.push(ryzen5, ryzen7, ryzen9, motherB450m, motherB550, motherX570, rtx2080, rtx3080, rtx4080, ramKingston, ramCorsair, ramViper, hdd1TB, hdd2TB, sdd1TB, sdd2TB)
+
+const productosJSON = JSON.stringify(productos)
+localStorage.setItem('productos', productosJSON)

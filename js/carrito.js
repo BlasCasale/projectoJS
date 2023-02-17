@@ -87,7 +87,9 @@ let vaciarCarro = document.getElementById('vaciarCarro')
 vaciarCarro.addEventListener('click', () => {
     
     // vacio el array y lo paso a LS para salvar los datos
-    carrito = []
+    while (carrito.length > 0){
+        carrito.pop()
+    }
     const carritoJSON = JSON.stringify(carrito)
     localStorage.setItem('carrito', carritoJSON)
 
@@ -96,4 +98,3 @@ vaciarCarro.addEventListener('click', () => {
 
     sumarCompra()
 })
-
