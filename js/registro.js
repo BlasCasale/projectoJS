@@ -5,14 +5,11 @@ const btnSubmit = document.getElementById('btnSubmit')
 const registroForm = document.getElementById('registroForm')
 
 
-
-let clientes = []
+const clientes = []
 
 const clientesLS = JSON.parse(localStorage.getItem('clientes'))
 
-if (clientesLS) {
-    clientes = clientesLS
-}
+clientes.push(...clientesLS)
 
 class Cliente {
     constructor (nombre, contra) {
@@ -33,8 +30,6 @@ formRegistro.addEventListener('submit', (e) => {
 const buscarCliente = (nombreUsuario) => {
 
     const buscarNombre = clientes.find(usuario => usuario.nombre == nombreUsuario)
- 
-    console.log(buscarNombre)
 
     if (buscarNombre) {
 

@@ -4,13 +4,11 @@ const contraLogin = document.getElementById('contraLogin')
 const loginSubmit = document.getElementById('loginSubmit')
 const respuestaForm = document.getElementById('respuestaForm')
 
-let clientes = []
+const clientes = []
 
 const clientesLS = JSON.parse(localStorage.getItem('clientes'))
 
-if (clientesLS) {
-    clientes = clientesLS
-}
+clientes.push(...clientesLS)
 
 
 

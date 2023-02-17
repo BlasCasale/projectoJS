@@ -65,6 +65,12 @@ h2 {
     color: $terciario;
     background-color: $secundario;
 }
+h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 2rem;
+    color: $terciario;
+}
 select, option {
     border: solid 2px $secundario;
     border-radius: 1rem;

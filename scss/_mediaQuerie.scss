@@ -18,6 +18,20 @@
     }
 
     /* Promociones */
+
+    .buscador {
+        @include flexColCenCen;
+        @include paddingMarginBGC (5px, 10px 0px, $terciario);
+        &__input {
+            @include sizes (300px, 30px)
+        }
+        &__btn {
+            border: none;
+        }
+        &__img {
+            @include sizes(30px, 30px);
+        }
+    }
     .caja__cards {
         @include gridCenCen;
         grid-template-columns: 1fr;
@@ -26,7 +40,7 @@
     .card__producto {
         @include flexColCenCen;
         @include paddingBGC (0.8rem, $terciario);
-        @include sizes (310px, 520px);
+        @include sizes (310px, 600px);
         border: solid 4px $primario;
         border-radius: 40px;
         gap: 0.5rem;
@@ -34,6 +48,7 @@
             text-align: center;
             font-size: 2rem;
             font-weight: bold;
+            color: $cuarto;
         }
         &-boton {
             @include paddingBGC (4px, $secundario);
@@ -185,6 +200,8 @@
 
 
 @media screen and (min-width: 1024px) {
-
+    .buscador {
+        @include flexRowCenSA;
+    }
 }
 

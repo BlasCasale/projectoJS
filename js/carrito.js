@@ -1,13 +1,16 @@
-let carrito = localStorage.getItem('carrito')
+const carrito = []
 
-let carritoJSON = JSON.parse(carrito)
+const carritoLS = JSON.parse(localStorage.getItem('carrito'))
+
+carrito.push(...carritoLS)
+
 
 // sumar compra
 const sumarCompra = () => {
     const totalCarro = document.getElementById('totalCarro')
 
     let valorInicial = 0
-    const sumaCompra = carritoJSON.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
+    const sumaCompra = carrito.reduce((acumulador, compra) => acumulador + compra.precio, valorInicial, 0)
         
     totalCarro.innerText = `$${sumaCompra}`
 }
@@ -15,7 +18,7 @@ const sumarCompra = () => {
 const hacerCarrito = () => {
     const contenedor = document.getElementById('carrito')
 
-    carritoJSON.forEach((compra) => {
+    carrito.forEach((compra) => {
         const div = document.createElement('div')
         div.classList.add('card__carro')
         div.innerHTML += `
@@ -47,13 +50,13 @@ btnTacho.addEventListener('click', (e) => {
 })
 
 const sacarDelCarrito = (productoIndex, productoID) => {
-    let index = carritoJSON.findIndex(producto => producto == productoIndex)
-    let id = carritoJSON.find(producto => producto.id == productoID)
+    let index = carrito.findIndex(producto => producto == productoIndex)
+    let id = carrito.find(producto => producto.id == productoID)
     
     if (index && id) {
-        carritoJSON.splice(index, 1)
-        carrito = JSON.stringify(carritoJSON)
-        localStorage.setItem('carrito', carrito)
+        carrito.splice(index, 1)
+        const carritoJSON = JSON.stringify(carrito)
+        localStorage.setItem('carrito', carritoJSON)
         
         const contenedor = document.getElementById('carrito')
         contenedor.innerHTML = ""
@@ -84,10 +87,9 @@ let vaciarCarro = document.getElementById('vaciarCarro')
 vaciarCarro.addEventListener('click', () => {
     
     // vacio el array y lo paso a LS para salvar los datos
-    carritoJSON = []
-    console.log(carritoJSON)
-    carrito = JSON.stringify(carritoJSON)
-    localStorage.setItem('carrito', carrito)
+    carrito = []
+    const carritoJSON = JSON.stringify(carrito)
+    localStorage.setItem('carrito', carritoJSON)
 
     const contenedor = document.getElementById('carrito')
     contenedor.innerHTML = ""

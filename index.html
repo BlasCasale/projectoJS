@@ -39,9 +39,22 @@
     <!-- Productos con js -->
 
     <h2>Nuestros productos</h2>
-    
-    <section class="grid__cards">
 
+    <section class="buscador">
+
+      <div class="buscador__div">
+        
+        <input type="text" id="buscarProducto" placeholder="Busca tu producto o categoria" class="buscador__input">
+        
+        <button class="buscador__btn">
+          <img src="img/lupa.jpg" alt="Lupa" class="buscador__img" id="btnBuscar">
+        </button>
+        
+      </div>
+
+    </section>
+    
+    <main class="grid__cards">
       <div class="caja__cards" id="padreCards">
 
       </div>
@@ -68,9 +81,7 @@
           </div>
 
         </div>
-
-    </section>
-
+    </main>
 
     <!-- Footer -->
     <div class="footer">
@@ -82,8 +93,8 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/stock.js"></script>
-    <script src="js/crearCards.js"></script>
-    <script src="js/pushearCarrito.js"></script>
+    <script src="js/crearCards.js" type="module"></script>
+    <script src="js/pushearCarrito.js" type="module"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
