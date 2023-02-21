@@ -16,6 +16,7 @@ const discos = document.getElementById('discos')
 
 // crear cards
 const makeCards = (product) => {
+    const contenedor = document.getElementById('padreCards')
     const div = document.createElement('div')
     div.classList.add('card__producto')
     div.innerHTML += `    
@@ -31,7 +32,7 @@ const makeCards = (product) => {
 }
 
 const makeFiltedCards = () => {
-    
+    const contenedor = document.getElementById('padreCards')
     searchArray.forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('card__producto')
@@ -78,7 +79,7 @@ const searchProduct = (productoNombre) => {
 
 // filtro para los botones de categoria 
 const filterCategories = (categoria) => {
-
+    
     while (searchArray.length > 0){
         searchArray.pop()
     }

@@ -2,7 +2,7 @@ const carrito = []
 
 const carritoLS = JSON.parse(localStorage.getItem('carrito'))
 
-carrito.push(...carritoLS)
+carrito.concat(carritoLS)
 
 
 // sumar compra
