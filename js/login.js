@@ -8,8 +8,9 @@ const clientes = []
 
 const clientesLS = JSON.parse(localStorage.getItem('clientes'))
 
-clientes.concat(clientesLS)
-
+for (const cliente of clientesLS) {
+    clientes.push(cliente)
+}
 
 
 
@@ -30,13 +31,6 @@ const buscarCliente = (nombreUsuario, contraUsuario) => {
             respuestaForm.innerText = `Bienvenido a su cuenta.`
         } else {
             respuestaForm.innerText = `Los datos ingresados no coinciden con un usuario existente.`
-            // for (let index = 3; index > 0; index--) {
-            //     respuestaForm.innerText = `Los datos ingresados no coinciden con un usuario existente.\n Te quedan ${index} intentos.`
-                // if (index = 0) {
-                //     respuestaForm.innerText = `No te quedan mas itentos.`
-                // }
-                // aca intente hacer un contador pero no me funcionaba de ninguna manera, quisiera encontrarle la solucion
-            // }
         }
 }
 

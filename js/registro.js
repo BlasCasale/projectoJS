@@ -9,7 +9,10 @@ const clientes = []
 
 const clientesLS = JSON.parse(localStorage.getItem('clientes'))
 
-clientes.concat(clientesLS)
+for (const cliente of clientesLS) {
+    clientes.push(cliente)
+}
+
 
 class Cliente {
     constructor (nombre, contra) {

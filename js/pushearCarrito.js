@@ -2,9 +2,9 @@ const carrito = []
 
 const carritoLS = JSON.parse(localStorage.getItem('carrito'))
 
-productos.concat(productosLS)
-carrito.concat(carritoLS)
-
+for (const prod of carritoLS) {
+    carrito.push(prod)
+}
 
 const contenedor = document.getElementById('padreCards')
 

@@ -1,7 +1,8 @@
 import { hacerCards } from "./crearCards.js";
 
 // array para la busqueda
-const searchArray = []
+
+const filtredArray = []
 
 // capturando los elementos del html
 const buscarProducto = document.getElementById('buscarProducto')
@@ -20,7 +21,7 @@ const makeCards = (product) => {
     const div = document.createElement('div')
     div.classList.add('card__producto')
     div.innerHTML += `    
-                    <img src="${product.img}" alt="${product.nombre}" class="card__producto-img"></img> 
+                    <img src="../${product.img}" alt="${product.nombre}" class="card__producto-img"></img> 
 
                     <p class="card__producto-p">${product.nombre}</p>
 
@@ -33,7 +34,7 @@ const makeCards = (product) => {
 
 const makeFiltedCards = () => {
     const contenedor = document.getElementById('padreCards')
-    searchArray.forEach((producto) => {
+    filtredArray.forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('card__producto')
         div.innerHTML += `    
@@ -52,14 +53,14 @@ const makeFiltedCards = () => {
 
 // buscador de productos
 const searchProduct = (productoNombre) => {
-    let producto = productos.find(producto => producto.nombre == productoNombre)
+    let product = productos.find(producto => producto.nombre == productoNombre)
 
-    if (producto != undefined) {
+    if (product != undefined) {
         buscarProducto.value = ""
 
         contenedor.innerHTML = ""
 
-        makeCards(producto)
+        makeCards(product)
     }else {
         Toastify({
             text: "Producto no encontrado",
@@ -80,17 +81,17 @@ const searchProduct = (productoNombre) => {
 // filtro para los botones de categoria 
 const filterCategories = (categoria) => {
     
-    while (searchArray.length > 0){
-        searchArray.pop()
+    while (filtredArray.length > 0){
+        filtredArray.pop()
     }
 
     let product = productos.filter(product => product.categoria === categoria)
-    searchArray.push(product)
+    filtredArray.push(product)
 
     contenedor.innerHTML = ""
 
     makeFiltedCards()
-    console.log(searchArray)
+    console.log(filtredArray)
 }
 
 // limpio el HTML y hago las cards de nuevo
