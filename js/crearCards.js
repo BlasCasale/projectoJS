@@ -19,4 +19,4 @@ const hacerCards = () => {
 
 hacerCards()
 
-export{hacerCards}
+export {hacerCards}

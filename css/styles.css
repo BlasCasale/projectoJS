@@ -194,6 +194,8 @@ select, option {
   .metodosDePago__h3 {
     font-weight: bold;
     font-size: 1.5rem;
+    padding: 0px;
+    color: #000;
   }
   .metodosDePago__formas {
     display: flex;
