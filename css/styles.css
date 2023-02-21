@@ -330,6 +330,12 @@ select, option {
     justify-content: space-around;
     align-items: center;
   }
+  .padre__cate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 /* Index */
 /* Promos */

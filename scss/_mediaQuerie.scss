@@ -205,5 +205,9 @@
     .buscador {
         @include flexRowCenSA;
     }
+
+    .padre__cate {
+        @include flexRowCenSA;
+    }
 }
 
