@@ -80,18 +80,20 @@ const searchProduct = (productoNombre) => {
 
 // filtro para los botones de categoria 
 const filterCategories = (categoria) => {
-    
+    const contenedor = document.getElementById('padreCards')
     while (filtredArray.length > 0){
         filtredArray.pop()
     }
 
     let prod = productos.filter(product => product.categoria === categoria)
-    filtredArray.push(prod)
+
 
     contenedor.innerHTML = ""
 
+    for (const product of prod) {
+        filtredArray.push(product)
+    }
     makeFiltedCards()
-    console.log(filtredArray)
 
     // en vez de hacer esto, hice esto tambien y tampoco funciona
 
