@@ -21,7 +21,7 @@ const makeCards = (product) => {
     const div = document.createElement('div')
     div.classList.add('card__producto')
     div.innerHTML += `    
-                    <img src="../${product.img}" alt="${product.nombre}" class="card__producto-img"></img> 
+                    <img src="${product.img}" alt="${product.nombre}" class="card__producto-img"></img> 
 
                     <p class="card__producto-p">${product.nombre}</p>
 
@@ -33,21 +33,21 @@ const makeCards = (product) => {
 }
 
 const makeFiltedCards = () => {
-    const contenedor = document.getElementById('padreCards')
-    filtredArray.forEach((producto) => {
-        const div = document.createElement('div')
-        div.classList.add('card__producto')
-        div.innerHTML += `    
-                        <img src="${producto.img}" alt="${producto.nombre}" class="card__producto-img"></img> 
-    
-                        <p class="card__producto-p">${producto.nombre}</p>
-    
-                        <h3 class="card__producto-h3">$${producto.precio}</h3>
-    
-                        <button type="submit" id="${producto.id}" class="card__producto-boton">Agregar al carrito</button>
-        `
-        contenedor.appendChild(div)
-    })
+        const contenedor = document.getElementById('padreCards')
+        filtredArray.forEach((producto) => {
+            const div = document.createElement('div')
+            div.classList.add('card__producto')
+            div.innerHTML += `    
+                            <img src="${producto.img}" alt="${producto.nombre}" class="card__producto-img"></img> 
+        
+                            <p class="card__producto-p">${producto.nombre}</p>
+        
+                            <h3 class="card__producto-h3">$${producto.precio}</h3>
+        
+                            <button type="submit" id="${producto.id}" class="card__producto-boton">Agregar al carrito</button>
+            `
+            contenedor.appendChild(div)
+        })
 }
 
 
@@ -85,13 +85,18 @@ const filterCategories = (categoria) => {
         filtredArray.pop()
     }
 
-    let product = productos.filter(product => product.categoria === categoria)
-    filtredArray.push(product)
+    let prod = productos.filter(product => product.categoria === categoria)
+    filtredArray.push(prod)
 
     contenedor.innerHTML = ""
 
     makeFiltedCards()
     console.log(filtredArray)
+
+    // en vez de hacer esto, hice esto tambien y tampoco funciona
+
+    // console.log(prod)
+    // makeCards(prod)
 }
 
 // limpio el HTML y hago las cards de nuevo
